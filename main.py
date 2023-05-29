@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request, make_response, send_from_directory, send_file
+from flask import Flask, render_template, send_file
 
 app = Flask(__name__)
+
 
 @app.route('/')
 def home():
@@ -14,10 +15,13 @@ def download_resume():
     except FileNotFoundError:
         return "File not found"
 # @app.route('/contact',methods=['POST'])
-# def submitcontact():
+
+
+# def SubmitContact():
 #   data = request.form
 #   add_application(id, data)
 #   return render_template('application_submitted.html', apply=data, job=job)
 
-if __name__ =='__main__':
+
+if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
