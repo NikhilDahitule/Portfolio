@@ -200,13 +200,17 @@
                 </div>
                 <div class="contact-form">
                     <form action="https://formsubmit.co/nikhildahitule@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <input type="text" name="mobile no." placeholder="Your contact details" required>
-        <textarea name="message" placeholder="Your message here" required></textarea>
-        <button type="submit">Send</button>
-    </form>
+    <input type="hidden" name="_captcha" value="false">
+    <label for="name">Your name</label>
+    <input type="text" name="name" id="name" required>
+    <label for="email">Your email address</label>
+    <input type="email" name="email" id="email" required>
+    <label for="mobile">Your mobile number</label>
+    <input type="text" name="mobile" id="mobile" required>
+    <label for="message">Your message</label>
+    <textarea name="message" id="message" required></textarea>
+    <button type="submit">Send</button>
+</form>
 
                 </div>
 
