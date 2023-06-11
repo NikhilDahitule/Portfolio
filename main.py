@@ -1,10 +1,9 @@
 from flask import Flask, render_template, request, send_file
 from pymongo import MongoClient
 import os
-username = os.getenv('username')
-password = os.getenv('password')
+connection_string = os.getenv('connection_string')
 app = Flask(__name__)
-client = MongoClient(f"mongodb+srv://{username}:{password}@cluster0.4vw4y5c.mongodb.net/")
+client = MongoClient(connection_string)
 db = client['Portfolio']
 collection = db['Portfolio']
 
