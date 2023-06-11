@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, send_file
 from pymongo import MongoClient
 
 app = Flask(__name__)
-client = MongoClient('')
+client = MongoClient('mongodb+srv://<username>:<password>@cluster0.4vw4y5c.mongodb.net/')
 db = client['Portfolio']
 collection = db['Portfolio']
 
@@ -44,6 +44,7 @@ def store_data_in_mongodb(name, email, mobile_no, message):
         'message': message
     }
     collection.insert_one(data)
+
 
 
 if __name__ == '__main__':
