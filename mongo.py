@@ -13,6 +13,8 @@ app.config["MONGO_URI"] = connection_string
 mongo = PyMongo(app)
 
 # Define the routes.
+
+
 @app.route('/')
 def home():
     return render_template('index.html')
