@@ -47,6 +47,5 @@ def store_data_in_mongodb(name, email, mobile_no, message):
     collection.insert_one(data)
 
 
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
